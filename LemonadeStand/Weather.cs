@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class weather
+    class Weather
     {
+        public Weather()
+        {
+
+        }
     }
 }
