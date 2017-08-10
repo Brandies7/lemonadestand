@@ -10,11 +10,14 @@ namespace LemonadeStand
     {
         static void Main(string[] args)
         {
-            
+            Lemons lemons = new Lemons();
+            lemons.BuyLemons();
+            Console.ReadLine();
         }
-        public Program()
-        {
 
-        }
+        
+        
+        
+        
     }
 }

@@ -8,6 +8,9 @@ namespace LemonadeStand
 {
     class Store
     {
+        protected int price;
+        protected int total;
+        
         public Store()
         {
 

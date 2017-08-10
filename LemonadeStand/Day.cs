@@ -12,5 +12,19 @@ namespace LemonadeStand
         {
 
         }
+        public void RunSevenDays()
+        {
+
+        }
+
+        public void RunFourteenDays()
+        {
+
+        }
+
+        public void RunTwentyOneDays()
+        {
+
+        }
     }
 }

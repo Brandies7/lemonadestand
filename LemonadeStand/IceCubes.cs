@@ -8,5 +8,9 @@ namespace LemonadeStand
 {
     class IceCubes
     {
+        public IceCubes()
+        {
+
+        }
     }
 }
