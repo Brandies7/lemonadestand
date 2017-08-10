@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace LemonadeStand
 {
@@ -11,23 +12,52 @@ namespace LemonadeStand
         Player player;
         Day days;
         Store store;
+        // string name;
         public Game()
         {
-            
+            player = new Player();
+            days = new Day();
+            store = new Store();
         }
 
-        public void myStore()
+        /*private void myName(string name)
         {
-            Store store = new Store();
+            player.runName(name);
+        }*/
+        private void myStore()
+        {
             store.runStore();
         }
-        private void DisplayRules()
+        private void displayRules()
         {
-            Console.WriteLine("Welocme " + player.name + ". Congratulations on your new buisness venture. Lets go over the rules and where to begin" + Environment.NewLine +
+            //player.runName(player.Name);
+            Console.WriteLine("Welocme " + player.Name + ". Congratulations on your new buisness venture. Lets go over the rules and where to begin" + Environment.NewLine +
                               "First, you'll need to go to the store and pick up your products. Then you're going to have to decide how to make your lemonade" + Environment.NewLine +
                               "(How much of each ingredient to add). Things you need to keep in mind: The weather will affect your sales. Price will also" + Environment.NewLine +
                               "affect your sales. The taste of your lemonade will affect customer satisfaction. Customer satisfaction will affect your stands" + Environment.NewLine +
-                              "popularity. Well, that pretty much covers it. Good luck" + player.name + "and may your stand turn a nice profit.");
+                              "popularity. Well, that pretty much covers it. Good luck " + player.Name + " and may your stand turn a nice profit." + Environment.NewLine);
+            
+            
+        }
+
+        private void goShopping()
+        {
+            Console.WriteLine("Goodmornig " + player.Name + ", would you like to go shopping today? 'yes' or 'no'" + Environment.NewLine);
+            string choice = Console.ReadLine();
+            switch (choice)
+            {
+                case "yes":
+                    store.runStore();
+                    break;
+                case "no":
+                    Console.WriteLine("Ok, well come back if you need anything.");
+                    goShopping();
+                    break;
+                default:
+                    Console.WriteLine("I'm sorry, but that was invalid choice. Please select another.");
+                    goShopping();
+                    break;
+            }
         }
 
         private void ChooseRunTime()
@@ -54,6 +84,16 @@ namespace LemonadeStand
                     break;
             }
         }
+
+        public void runGame()
+        {
+            player.runName(player.Name);
+            displayRules();
+            goShopping();
+            myStore();
+
+        }
+        
     }
 }
      

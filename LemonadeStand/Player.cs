@@ -8,21 +8,40 @@ namespace LemonadeStand
 {
     class Player
     {
-        public string name;
+
+        private string name;
         
+
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+        }
 
         public Player()
         {
+            
+        }
+            
+    
 
+        private void getName()
+        {
+            Console.WriteLine("Please Enter Your Name" + Environment.NewLine);
+            name = Console.ReadLine() + Environment.NewLine;
+            
         }
 
-        public void GetName()
+        public void runName(string name)
         {
-            Console.WriteLine("Please Enter Your Name");
-            name = Console.ReadLine();
+            getName();
         }
     }
 }
+
+    
 
         
 
