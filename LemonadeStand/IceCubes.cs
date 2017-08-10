@@ -23,7 +23,16 @@ namespace LemonadeStand
             {
                 myIce.Add(new IceCubes());
             }
+            calculateTotal(ice);
+        }
 
+        public void calculateTotal(int ice)
+        {
+
+            double total = ice * 0.10;
+            Console.WriteLine("Your total is $" + total + ". Thank you for your purchase.");
+            Console.ReadLine();
         }
     }
 }
+

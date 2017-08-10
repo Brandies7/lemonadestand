@@ -6,28 +6,41 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Lemons 
+    class Lemons
     {
+
+        List<Lemons> mylemons = new List<Lemons>();
+
         public Lemons()
         {
-            
+
         }
 
         public void BuyLemons()
         {
             Console.WriteLine("How many lemons would you like to purchase?");
             int lemons = int.Parse(Console.ReadLine());
-
-            List<Lemons> mylemons = new List<Lemons>();
+            
+            List<Lemons> mylemons= new List<Lemons>();
             for (int i = 0; i <= lemons; i++)
             {
                 mylemons.Add(new Lemons());
             }
 
+            calculateTotal(lemons);
+        }
+
+        public void calculateTotal(int lemons)
+        {
+            
+            double total = lemons * 0.25;
+            Console.WriteLine("Your total is $" + total + ". Thank you for your purchase.");
+            Console.ReadLine();
         }
     }
 }
 
+  
         
         
  

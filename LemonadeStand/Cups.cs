@@ -23,7 +23,17 @@ namespace LemonadeStand
             {
                 myCups.Add(new Cups());
             }
+            calculateTotal(cups);
+        }
 
+        public void calculateTotal(int cups)
+        {
+
+            double total = cups * 0.25;
+            Console.WriteLine("Your total is $" + total + ". Thank you for your purchase.");
+            Console.ReadLine();
         }
     }
 }
+    
+

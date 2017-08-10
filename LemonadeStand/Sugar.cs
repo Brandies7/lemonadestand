@@ -23,7 +23,15 @@ namespace LemonadeStand
             {
                 mySugar.Add(new Sugar());
             }
+            calculateTotal(sugar);
+        }
 
+        public void calculateTotal(int sugar)
+        {
+            double total = sugar * 0.25;
+            Console.WriteLine("Your total is $" + total + ". Thank you for your purchase.");
+            Console.ReadLine();
         }
     }
 }
+

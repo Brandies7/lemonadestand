@@ -11,9 +11,10 @@ namespace LemonadeStand
 
         static void Main(string[] args)
         {
-            Lemons lemons = new Lemons();
-            lemons.BuyLemons();
-            Console.ReadLine();
+            Game game = new Game();
+            game.myStore();
+            
+
         }
 
         

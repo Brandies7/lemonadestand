@@ -8,8 +8,7 @@ namespace LemonadeStand
 {
     class Store
     {
-        protected int price;
-        protected int total;
+        
         Lemons lemons;
         Sugar sugar;
         IceCubes ice;
@@ -47,7 +46,7 @@ namespace LemonadeStand
                     getPurchase();
                     break;
             }
-                
         }
     }
 }
+                
