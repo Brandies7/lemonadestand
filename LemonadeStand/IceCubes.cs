@@ -12,5 +12,18 @@ namespace LemonadeStand
         {
 
         }
+
+        public void BuyIceCubes()
+        {
+            Console.WriteLine("How much ice would you like to purchase?");
+            int ice = int.Parse(Console.ReadLine());
+
+            List<IceCubes> myIce = new List<IceCubes>();
+            for (int i = 0; i <= ice; i++)
+            {
+                myIce.Add(new IceCubes());
+            }
+
+        }
     }
 }
