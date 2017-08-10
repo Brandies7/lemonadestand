@@ -16,7 +16,7 @@ namespace LemonadeStand
 
         }
 
-        public void BuyLemons()
+        private void buyLemons()
         {
             Console.WriteLine("How many lemons would you like to purchase?");
             int lemons = int.Parse(Console.ReadLine());
@@ -30,12 +30,19 @@ namespace LemonadeStand
             calculateTotal(lemons);
         }
 
-        public void calculateTotal(int lemons)
+        private void calculateTotal(int lemons)
         {
             
             double total = lemons * 0.25;
             Console.WriteLine("Your total is $" + total + ". Thank you for your purchase.");
             Console.ReadLine();
+        }
+
+        public void runLemons()
+        {
+            buyLemons();
+            
+
         }
     }
 }

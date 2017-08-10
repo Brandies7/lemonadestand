@@ -19,7 +19,7 @@ namespace LemonadeStand
         public void myStore()
         {
             Store store = new Store();
-            store.getPurchase();
+            store.runStore();
         }
         private void DisplayRules()
         {

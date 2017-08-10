@@ -15,10 +15,14 @@ namespace LemonadeStand
         Cups cups;
         public Store()
         {
-
+            lemons = new Lemons();
+            
+            sugar = new Sugar();
+            ice = new IceCubes();
+            cups = new Cups();
         }
 
-        public void getPurchase()
+        private void getPurchase()
         {
             Console.WriteLine("Welcome to The General Store, your one stop-shop for all of your Lemonade Stand needs. How can we help you today?" + Environment.NewLine +
                               "Please choose what items you would like to purchase." + Environment.NewLine +
@@ -30,7 +34,7 @@ namespace LemonadeStand
             switch (purchase)
             {
                 case "Lemons":
-                    lemons.BuyLemons();
+                    lemons.runLemons();
                     break;
                 case "Sugar":
                     sugar.BuySugar();
@@ -47,6 +51,12 @@ namespace LemonadeStand
                     break;
             }
         }
+
+        public void runStore()
+        {
+            getPurchase();
+        }
+        
     }
 }
                 
