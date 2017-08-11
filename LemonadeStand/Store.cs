@@ -29,19 +29,19 @@ namespace LemonadeStand
                               "Sugar: at 50 cents a cup" + Environment.NewLine +
                               "IceCubes: at 10 cents a cube" + Environment.NewLine +
                               "Cups: at 25 cents a cup");
-            string purchase = Console.ReadLine();
+            string purchase = Console.ReadLine().ToLower();
             switch (purchase)
             {
-                case "Lemons":
+                case "lemons":
                     lemons.runLemons();
                     break;
-                case "Sugar":
+                case "sugar":
                     sugar.BuySugar();
                     break;
-                case "IceCubes":
+                case "icecubes":
                     ice.BuyIceCubes();
                     break;
-                case "Cups":
+                case "cups":
                     cups.BuyCups();
                     break;
                 default:

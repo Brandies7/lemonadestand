@@ -13,7 +13,7 @@ namespace LemonadeStand
         Day days;
         Store store;
         
-        // string name;
+        
         public Game()
         {
             player = new Player();
@@ -21,17 +21,14 @@ namespace LemonadeStand
             store = new Store();
         }
 
-        /*private void myName(string name)
-        {
-            player.runName(name);
-        }*/
+       
         private void myStore()
         {
             store.runStore();
         }
         private void displayRules()
         {
-            //player.runName(player.Name);
+            
             Console.WriteLine("Welocme " + player.Name + ". Congratulations on your new buisness venture. Lets go over the rules and where to begin" + Environment.NewLine +
                               "First, you'll need to go to the store and pick up your products. Then you're going to have to decide how to make your lemonade" + Environment.NewLine +
                               "(How much of each ingredient to add). Things you need to keep in mind: The weather will affect your sales. Price will also" + Environment.NewLine +
@@ -43,8 +40,8 @@ namespace LemonadeStand
 
         private void goShopping()
         {
-            Console.WriteLine("Goodmornig " + player.Name + ", would you like to go shopping today? 'yes' or 'no'" + Environment.NewLine);
-            string choice = Console.ReadLine();
+            Console.WriteLine("Goodmornig " + player.Name + ", would you like to go shopping today? 'Yes' or 'No'" + Environment.NewLine);
+            string choice = Console.ReadLine().ToLower();
             switch (choice)
             {
                 case "yes":

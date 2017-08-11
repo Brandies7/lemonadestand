@@ -29,7 +29,7 @@ namespace LemonadeStand
 
         private void getName()
         {
-            Console.WriteLine("Please Enter Your Name");
+            Console.WriteLine("Hello New Player, Please Enter Your Name");
             name = Console.ReadLine();
             
         }
