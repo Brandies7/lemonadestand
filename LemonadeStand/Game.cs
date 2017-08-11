@@ -49,7 +49,6 @@ namespace LemonadeStand
                     break;
                 case "no":
                     Console.WriteLine("Ok, well come back if you need anything.");
-                    goShopping();
                     break;
                 default:
                     Console.WriteLine("I'm sorry, but that was invalid choice. Please select another.");

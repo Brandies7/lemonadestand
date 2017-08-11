@@ -9,6 +9,7 @@ namespace LemonadeStand
     class Day
     {
         Weather weather;
+        
         public Day()
         {
             weather = new Weather();

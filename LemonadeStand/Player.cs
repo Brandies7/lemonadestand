@@ -34,6 +34,11 @@ namespace LemonadeStand
             
         }
 
+        private void cashTotal()
+        {
+
+        }
+
         public void runName(string name)
         {
             getName();

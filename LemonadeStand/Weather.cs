@@ -8,11 +8,12 @@ namespace LemonadeStand
 {
     class Weather
     {
-        
 
+        public int temp;
+        
         public Weather()
         {
-
+           // Weather weather = new Weather();
         }
 
         private string getWeather()
@@ -31,7 +32,7 @@ namespace LemonadeStand
         private int getTemp()
         {
             Random random = new Random();
-            int temp = random.Next(50, 100);
+            temp = random.Next(50, 100);
             return temp;
         }
 
@@ -50,9 +51,26 @@ namespace LemonadeStand
 
         private int getForecastTemp()
         {
-            Random random = new Random();
-            int temp = random.Next(65, 85);
-            return temp;
+            if (temp > 50 && temp < 65)
+            {
+                Random random = new Random();
+                int forecastTemp = random.Next(50, 65);
+                return forecastTemp;
+            }
+            else if (temp > 65 && temp < 80)
+            {
+                Random random = new Random();
+                int forecastTemp = random.Next(65, 80);
+                return forecastTemp;
+            }
+            else
+            {
+                Random random = new Random();
+                int forecastTemp = random.Next(80, 100);
+                return forecastTemp;
+            }
+            
+            
         }
 
 
@@ -61,9 +79,11 @@ namespace LemonadeStand
 
         public void runWeather()
         {
-            Console.WriteLine("Todays forecast is " + getForecast() + " and " + getForecastTemp() + " degrees.");
+            //getTemp();
+            //getForecast();
+            Console.WriteLine("Todays forecast is " + getForecast() + " and " + getTemp() + " degrees.");
             Console.ReadLine();
-            Console.WriteLine("Todays weather is " + getWeather() + " and " + getTemp() + " degrees.");
+            Console.WriteLine("Todays weather is " + getWeather() + " and " + getForecastTemp() + " degrees.");
             Console.ReadLine();
             
         }
