@@ -13,7 +13,7 @@ namespace LemonadeStand
         
         public Weather()
         {
-           // Weather weather = new Weather();
+           
         }
 
         private string getWeather()
@@ -79,8 +79,7 @@ namespace LemonadeStand
 
         public void runWeather()
         {
-            //getTemp();
-            //getForecast();
+            
             Console.WriteLine("Todays forecast is " + getForecast() + " and " + getTemp() + " degrees.");
             Console.ReadLine();
             Console.WriteLine("Todays weather is " + getWeather() + " and " + getForecastTemp() + " degrees.");

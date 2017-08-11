@@ -9,7 +9,7 @@ namespace LemonadeStand
     class Lemons
     {
 
-        //List<Lemons> mylemons = new List<Lemons>();
+        
 
         public Lemons()
         {

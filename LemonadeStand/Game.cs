@@ -12,6 +12,7 @@ namespace LemonadeStand
         Player player;
         Day days;
         Store store;
+        Customer customer;
         
         
         public Game()
@@ -19,6 +20,7 @@ namespace LemonadeStand
             player = new Player();
             days = new Day();
             store = new Store();
+            customer = new Customer();
         }
 
        
@@ -88,6 +90,7 @@ namespace LemonadeStand
             displayRules();
             goShopping();
             days.runDay();
+            customer.runCustomers();
             
 
         }
