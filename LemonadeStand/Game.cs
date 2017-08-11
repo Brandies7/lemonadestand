@@ -12,6 +12,7 @@ namespace LemonadeStand
         Player player;
         Day days;
         Store store;
+        
         // string name;
         public Game()
         {
@@ -90,7 +91,8 @@ namespace LemonadeStand
             player.runName(player.Name);
             displayRules();
             goShopping();
-            myStore();
+            days.runDay();
+            
 
         }
         

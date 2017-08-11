@@ -8,9 +8,15 @@ namespace LemonadeStand
 {
     class Day
     {
+        Weather weather;
         public Day()
         {
+            weather = new Weather();
+        }
 
+        private void myWeather()
+        {
+            weather.runWeather();
         }
         public void RunSevenDays()
         {
@@ -25,6 +31,11 @@ namespace LemonadeStand
         public void RunTwentyOneDays()
         {
 
+        }
+
+        public void runDay()
+        {
+            myWeather();
         }
     }
 }

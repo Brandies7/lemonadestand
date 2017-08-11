@@ -29,8 +29,8 @@ namespace LemonadeStand
 
         private void getName()
         {
-            Console.WriteLine("Please Enter Your Name" + Environment.NewLine);
-            name = Console.ReadLine() + Environment.NewLine;
+            Console.WriteLine("Please Enter Your Name");
+            name = Console.ReadLine();
             
         }
 
