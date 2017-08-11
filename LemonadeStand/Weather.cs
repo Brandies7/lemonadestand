@@ -25,8 +25,6 @@ namespace LemonadeStand
             Random random = new Random();
             int weather = random.Next(daysWeather.Count);
             string currentWeather = daysWeather[weather];
-            Console.WriteLine("Todays weather is " + currentWeather + ".");
-            Console.ReadLine();
             return currentWeather;
         }
 
@@ -34,18 +32,40 @@ namespace LemonadeStand
         {
             Random random = new Random();
             int temp = random.Next(50, 100);
-            Console.WriteLine("Todays temp is " + temp + " degrees.");
-            Console.ReadLine();
             return temp;
         }
-            
 
-        
+        private string getForecast()
+        {
+            List<string> daysForecast = new List<string>();
+            daysForecast.Add("sunny");
+            daysForecast.Add("cloudy");
+            daysForecast.Add("rainy");
+            daysForecast.Add("cloudy and rainy");
+            Random random = new Random();
+            int forecast = random.Next(daysForecast.Count);
+            string currentForecast = daysForecast[forecast];
+            return currentForecast;
+        }
+
+        private int getForecastTemp()
+        {
+            Random random = new Random();
+            int temp = random.Next(65, 85);
+            return temp;
+        }
+
+
+
+
 
         public void runWeather()
         {
-            getWeather();
-            getTemp();
+            Console.WriteLine("Todays forecast is " + getForecast() + " and " + getForecastTemp() + " degrees.");
+            Console.ReadLine();
+            Console.WriteLine("Todays weather is " + getWeather() + " and " + getTemp() + " degrees.");
+            Console.ReadLine();
+            
         }
     }
 }
