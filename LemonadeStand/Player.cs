@@ -10,7 +10,6 @@ namespace LemonadeStand
     {
 
         private string name;
-        
 
         public string Name
         {
@@ -24,16 +23,13 @@ namespace LemonadeStand
         {
             
         }
-            
-    
 
         private void getName()
         {
             Console.WriteLine("Hello New Player, Please Enter Your Name");
             name = Console.ReadLine();
-            
         }
-
+            
         private void cashTotal()
         {
 

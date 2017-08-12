@@ -8,7 +8,7 @@ namespace LemonadeStand
 {
     class Customer
     {
-        
+
         public Customer()
         {
 
@@ -19,15 +19,10 @@ namespace LemonadeStand
             int i;
             List<Customer> dailyCustomers = new List<Customer>();
             for (i = 0; i <= 50; i++)
-                 
-                
             {
                 dailyCustomers.Add(new Customer());
                 dailyCustomers.ToString();
-
             }
-            
-
         }
 
         private string getOpinions()
@@ -45,7 +40,7 @@ namespace LemonadeStand
 
         private void mergeLists()
         {
-            
+
         }
 
         public void runCustomers()
@@ -53,6 +48,7 @@ namespace LemonadeStand
             getCustomers();
             getOpinions();
         }
-
     }
 }
+
+  
