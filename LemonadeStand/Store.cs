@@ -8,7 +8,7 @@ namespace LemonadeStand
 {
     class Store
     {
-        
+
         Lemons lemons;
         Sugar sugar;
         IceCubes ice;
@@ -21,7 +21,7 @@ namespace LemonadeStand
             cups = new Cups();
         }
 
-        private void getPurchase()
+        public void getPurchase()
         {
             Console.WriteLine("Welcome to The General Store, your one stop-shop for all of your Lemonade Stand needs. How can we help you today?" + Environment.NewLine +
                               "Please choose what items you would like to purchase." + Environment.NewLine +
@@ -33,7 +33,7 @@ namespace LemonadeStand
             switch (purchase)
             {
                 case "lemons":
-                    lemons.runLemons();
+                    buyLemons();
                     break;
                 case "sugar":
                     sugar.BuySugar();
@@ -51,11 +51,57 @@ namespace LemonadeStand
             }
         }
 
-        public void runStore()
+        private void buyLemons()
         {
-            getPurchase();
+            Console.WriteLine("How many lemons would you like to purchase?");
+            int lemons = int.Parse(Console.ReadLine());
+
+            List<Lemons> mylemons = new List<Lemons>();
+            for (int i = 0; i <= lemons; i++)
+            {
+                mylemons.Add(new Lemons());
+            }
+
+            calculateTotal(lemons);
         }
-        
+
+        private void calculateTotal(int lemons)
+        {
+
+            double total = lemons * 0.25;
+            Console.WriteLine("Your total is $" + total + ". Thank you for your purchase. Would you like to continue shopping? 'Yes' or 'No'");
+            string continueShopping = Console.ReadLine().ToLower();
+            switch (continueShopping)
+            {
+                case "yes":
+                    getPurchase();
+                    break;
+                case "no":
+                    Console.WriteLine("Ok, well you have a good day, and goodluck on your sales. Hope to see you soon.");
+                    break;
+                default:
+                    Console.WriteLine("Sorry but that was not a valid entry. Please try again.");
+                    break;
+            }
+        }
     }
 }
+
+
+
+        
+ 
+
+
+
+
+
+            
+
+
+  
+
+
+       
+
                 

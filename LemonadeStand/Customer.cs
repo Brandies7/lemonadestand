@@ -43,6 +43,11 @@ namespace LemonadeStand
             return todaysOpinion;
         }
 
+        private void mergeLists()
+        {
+            
+        }
+
         public void runCustomers()
         {
             getCustomers();

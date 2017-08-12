@@ -23,11 +23,12 @@ namespace LemonadeStand
             customer = new Customer();
         }
 
-       
+
         private void myStore()
         {
-            store.runStore();
+
         }
+            
         private void displayRules()
         {
             
@@ -47,7 +48,7 @@ namespace LemonadeStand
             switch (choice)
             {
                 case "yes":
-                    store.runStore();
+                    store.getPurchase();
                     break;
                 case "no":
                     Console.WriteLine("Ok, well come back if you need anything.");
