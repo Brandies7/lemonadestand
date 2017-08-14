@@ -10,20 +10,21 @@ namespace LemonadeStand
     class Game
     {
         UserInterface ui;
-        Customer customer;
         Day days;
 
         public Game()
         {
             ui = new UserInterface();
-            customer = new Customer();
-            days = new Day();
         }
         public void runGame()
         {
             ui.runUserInterface();
-            days.runDay();
-            customer.runCustomers();
+            for(int i = 0; i < 7; i++)
+            {
+                days = new Day();
+                days.RunDay();
+            }
+            
         }
     }
 }

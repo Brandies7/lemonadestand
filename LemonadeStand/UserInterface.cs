@@ -16,7 +16,7 @@ namespace LemonadeStand
         {
             player = new Player();
             days = new Day();
-            store = new Store();
+            store = new Store(player);
             customer = new Customer();
         }
 

@@ -8,17 +8,13 @@ namespace LemonadeStand
 {
     class Store
     {
-
-        Lemons lemons;
-        Sugar sugar;
-        IceCubes ice;
-        Cups cups;
-        public Store()
+        Player player;
+        
+        
+        public Store(Player player)
         {
-            lemons = new Lemons();
-            sugar = new Sugar();
-            ice = new IceCubes();
-            cups = new Cups();
+            this.player = player;
+
         }
 
         public void getPurchase()
@@ -36,13 +32,13 @@ namespace LemonadeStand
                     buyLemons();
                     break;
                 case "sugar":
-                    sugar.BuySugar();
+                    buySugar();
                     break;
                 case "icecubes":
-                    ice.BuyIceCubes();
+                    buyIceCubes();
                     break;
                 case "cups":
-                    cups.BuyCups();
+                    buyCups();
                     break;
                 default:
                     Console.WriteLine("Sorry, we don't carry that item. Please select another.");
@@ -51,21 +47,22 @@ namespace LemonadeStand
             }
         }
 
-        private void buyLemons()
+        public void buyLemons()
         {
             Console.WriteLine("How many lemons would you like to purchase?");
             int lemons = int.Parse(Console.ReadLine());
 
-            List<Lemons> mylemons = new List<Lemons>();
+            //List<Lemons> myLemons = new List<Lemons>();
             for (int i = 0; i <= lemons; i++)
             {
-                mylemons.Add(new Lemons());
+                //myLemons.Add(new Lemons());
+                player.inventory.playerLemons.Add(new Lemons());
             }
 
-            calculateTotal(lemons);
+            calculateTotalLemons(lemons);
         }
 
-        private void calculateTotal(int lemons)
+        private void calculateTotalLemons(int lemons)
         {
 
             double total = lemons * 0.25;
@@ -83,6 +80,70 @@ namespace LemonadeStand
                     Console.WriteLine("Sorry but that was not a valid entry. Please try again.");
                     break;
             }
+        }
+
+        public void buySugar()
+        {
+            Console.WriteLine("How much sugar would you like to purchase? (In Cups)");
+            int sugar = int.Parse(Console.ReadLine());
+
+            List<Sugar> mySugar = new List<Sugar>();
+            for (int i = 0; i <= sugar; i++)
+            {
+                mySugar.Add(new Sugar());
+            }
+
+            calculateTotalSugar(sugar);
+        }
+           
+        public void calculateTotalSugar(int sugar)
+        {
+            double total = sugar * 0.25;
+            Console.WriteLine("Your total is $" + total + ". Thank you for your purchase.");
+            Console.ReadLine();
+        }
+
+        public void buyIceCubes()
+        {
+            Console.WriteLine("How much ice would you like to purchase?");
+            int ice = int.Parse(Console.ReadLine());
+
+            List<IceCubes> myIce = new List<IceCubes>();
+            for (int i = 0; i <= ice; i++)
+            {
+                myIce.Add(new IceCubes());
+            }
+
+            calculateTotalIce(ice);
+        }
+            
+        public void calculateTotalIce(int ice)
+        {
+
+            double total = ice * 0.10;
+            Console.WriteLine("Your total is $" + total + ". Thank you for your purchase.");
+            Console.ReadLine();
+        }
+
+        public void buyCups()
+        {
+            Console.WriteLine("How much ice would you like to purchase?");
+            int cups = int.Parse(Console.ReadLine());
+
+            List<Cups> myCups = new List<Cups>();
+            for (int i = 0; i <= cups; i++)
+            {
+                myCups.Add(new Cups());
+            }
+
+            calculateTotalCups(cups);
+        }
+            
+        public void calculateTotalCups(int cups)
+        {
+            double total = cups * 0.25;
+            Console.WriteLine("Your total is $" + total + ". Thank you for your purchase.");
+            Console.ReadLine();
         }
     }
 }

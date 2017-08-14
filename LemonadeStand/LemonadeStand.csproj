@@ -49,6 +49,7 @@
     <Compile Include="Game.cs" />
     <Compile Include="IceCubes.cs" />
     <Compile Include="Inventory.cs" />
+    <Compile Include="Items.cs" />
     <Compile Include="Lemons.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />

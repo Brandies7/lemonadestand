@@ -10,6 +10,7 @@ namespace LemonadeStand
     {
 
         private string name;
+        public Inventory inventory;
 
         public string Name
         {
@@ -21,7 +22,7 @@ namespace LemonadeStand
 
         public Player()
         {
-            
+            inventory = new Inventory();
         }
 
         private void getName()
@@ -38,6 +39,14 @@ namespace LemonadeStand
         public void runName(string name)
         {
             getName();
+        }
+        public void CalculateCostOfLemons()
+        {
+            double totalCostLemons = 0;
+            for(int i = 0; i < inventory.playerLemons.Count; i++)
+            {
+                totalCostLemons += inventory.playerLemons[i].price;
+            }
         }
     }
 }

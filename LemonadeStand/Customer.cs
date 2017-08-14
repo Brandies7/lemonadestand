@@ -6,26 +6,17 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Customer
+    public class Customer
     {
-
+        public string todaysOpinion;
         public Customer()
         {
 
         }
 
-        private void getCustomers()
-        {
-            int i;
-            List<Customer> dailyCustomers = new List<Customer>();
-            for (i = 0; i <= 200; i++)
-            {
-                dailyCustomers.Add(new Customer());
-                dailyCustomers.ToString();
-            }
-        }
+        
 
-        private string getOpinions()
+        public void getOpinions()
         {
             List<string> customerOpinions = new List<string>();
             customerOpinions.Add("I'm really thirsty, no matter what the weather today, I'm buying some lemonade.");
@@ -34,20 +25,13 @@ namespace LemonadeStand
             customerOpinions.Add("If it is hot out, I'm definitely stop and get some lemonade.");
             Random random = new Random();
             int opinion = random.Next(customerOpinions.Count);
-            string todaysOpinion = customerOpinions[opinion];
-            return todaysOpinion;
+            todaysOpinion = customerOpinions[opinion];
         }
-
-        private void mergeLists()
+        public void CheckIfBuy()
         {
-
+            
         }
-
-        public void runCustomers()
-        {
-            getCustomers();
-            getOpinions();
-        }
+        
     }
 }
 

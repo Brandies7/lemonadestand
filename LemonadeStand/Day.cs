@@ -6,18 +6,49 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Day
+    public class Day
     {
         Weather weather;
+        List<Customer> customers;
         
         public Day()
         {
             weather = new Weather();
+            customers = new List<Customer>();
         }
-
+        private void getCustomers()
+        {
+            int i;
+            for (i = 0; i <= 200; i++)
+            {
+                customers.Add(new Customer());
+                //dailyCustomers.ToString();
+            }
+        }
         private void myWeather()
         {
             weather.runWeather();
+        }
+        public void RunDay()
+        {
+            getCustomers();
+            myWeather();
+            GenerateCustomerOpinions();
+            GenerateCustomerPurchases();
+        }
+        public void GenerateCustomerOpinions()
+        {
+            for(int i = 0; i < customers.Count; i++)
+            {
+                customers[i].getOpinions();
+            }
+        }
+        public void GenerateCustomerPurchases()
+        {
+            for (int i = 0; i < customers.Count; i++)
+            {
+                customers[i].CheckIfBuy();
+            }
         }
         public void RunSevenDays()
         {
@@ -34,9 +65,6 @@ namespace LemonadeStand
 
         }
 
-        public void runDay()
-        {
-            myWeather();
-        }
+        
     }
 }

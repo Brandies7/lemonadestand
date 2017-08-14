@@ -12,12 +12,20 @@ namespace LemonadeStand
         public List<Sugar> playerSugar;
         public List<Cups> playerCups;
         public List<IceCubes> playerIceCubes;
+        //public Store store;
         public Inventory()
         {
-            playerLemons = new List<Lemons>();
+            playerLemons= new List<Lemons>();
             playerSugar = new List<Sugar>();
             playerCups = new List<Cups>();
             playerIceCubes = new List<IceCubes>();
-        }       
+            //store = new Store();
+            
+
+            
+        }  
+        
+        
+
     }
 }
