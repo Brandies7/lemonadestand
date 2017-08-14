@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace LemonadeStand
 {
-    class Game
+    public class Game
     {
         UserInterface ui;
         Day days;
@@ -19,13 +19,11 @@ namespace LemonadeStand
         public void runGame()
         {
             ui.runUserInterface();
-            for(int i = 0; i < 7; i++)
-            {
-                days = new Day();
-                days.RunDay();
-            }
+            
             
         }
+
+        
     }
 }
             

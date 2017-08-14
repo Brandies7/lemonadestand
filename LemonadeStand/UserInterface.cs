@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class UserInterface
+    public class UserInterface
     {
         Player player;
-        Day days;
         Store store;
         Customer customer;
+        
         public UserInterface()
         {
+            
             player = new Player();
-            days = new Day();
             store = new Store(player);
             customer = new Customer();
+
         }
 
         private void displayRules()
@@ -50,36 +51,15 @@ namespace LemonadeStand
             }
         }
 
-        private void ChooseRunTime()
-        {
-            Console.WriteLine("Please Choose How Many Days You Would Like Your Stand To Be Open For" + Environment.NewLine +
-                              "Enter '1' For 7 Days" + Environment.NewLine +
-                              "Enter '2' For 14 Days" + Environment.NewLine +
-                              "Enter '3' For 21 Days" + Environment.NewLine);
-            string runtime = Console.ReadLine();
-            switch (runtime)
-            {
-                case "1":
-                    days.RunSevenDays();
-                    break;
-                case "2":
-                    days.RunFourteenDays();
-                    break;
-                case "3":
-                    days.RunTwentyOneDays();
-                    break;
-                default:
-                    Console.WriteLine("Sorry, That Was An Invalid Response. Please Choose One Of The Options Given");
-                    ChooseRunTime();
-                    break;
-            }
-        }
+       
+        
 
         public void runUserInterface()
         {
             player.getName();
             Console.WriteLine();
             displayRules();
+            
             Console.WriteLine();
             goShopping();
             Console.WriteLine();

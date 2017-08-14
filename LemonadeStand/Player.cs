@@ -11,6 +11,7 @@ namespace LemonadeStand
 
         private string name;
         public Inventory inventory;
+        public double totalCostLemons; 
 
         public string Name
         {
@@ -36,17 +37,15 @@ namespace LemonadeStand
 
         }
 
-        public void runName()
-        {
-            getName();
-        }
         public void CalculateCostOfLemons()
         {
             double totalCostLemons = 0;
-            for (int i = 0; i < inventory.playerLemons.Count; i++)
+            for (int i = 1; i < inventory.playerLemons.Count; i++)
             {
                 totalCostLemons += inventory.playerLemons[i].price;
             }
+            Console.WriteLine("Your total is " + totalCostLemons + ". Thank you for your purchase");
+            Console.ReadLine();
         }
 
         public void CalculateCostOfSugar()
@@ -54,8 +53,10 @@ namespace LemonadeStand
             double totalCostSugar = 0;
             for (int i = 0; i < inventory.playerSugar.Count; i++)
             {
-                totalCostSugar += inventory.playerSugar[i].price;
+                totalCostSugar += inventory.playerSugar[i].price;    
             }
+            Console.WriteLine("Your total is $" + totalCostSugar + ". Thank you for your purchase");
+            Console.ReadLine();
         }
 
         public void CalculateCostOfCups()
@@ -63,8 +64,10 @@ namespace LemonadeStand
             double totalCostCups = 0;
             for (int i = 0; i < inventory.playerCups.Count; i++)
             {
-                totalCostCups += inventory.playerCups[i].price;
+                totalCostCups += inventory.playerCups[i].price;               
             }
+            Console.WriteLine("Your total is $" + totalCostCups + ". Thank you for your purchase");
+            Console.ReadLine();
         }
 
         public void CalculateCostOfIce()
@@ -72,8 +75,10 @@ namespace LemonadeStand
             double totalCostIce = 0;
             for (int i = 0; i < inventory.playerIceCubes.Count; i++)
             {
-                totalCostIce += inventory.playerIceCubes[i].price;
+                totalCostIce += inventory.playerIceCubes[i].price;               
             }
+            Console.WriteLine("Your total is $" + totalCostIce + ". Thank you for your purchase");
+            Console.ReadLine();
         }
     }
 }

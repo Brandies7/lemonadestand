@@ -57,17 +57,10 @@ namespace LemonadeStand
                 player.inventory.playerLemons.Add(new Lemons());
             }
 
-            calculateTotalLemons(lemons);
-        }
-
-        private void calculateTotalLemons(int lemons)
-        {
-
-            double total = lemons * 0.25;
-            Console.WriteLine("Your total is $" + total + ". Thank you for your purchase.");
+            player.CalculateCostOfLemons();
             KeepShopping();
         }
-
+            
         public void buySugar()
         {
             Console.WriteLine("How much sugar would you like to purchase? (In Cups)");
@@ -79,15 +72,11 @@ namespace LemonadeStand
                 player.inventory.playerSugar.Add(new Sugar());
             }
 
-            calculateTotalSugar(sugar);
-        }
-
-        public void calculateTotalSugar(int sugar)
-        {
-            double total = sugar * 0.25;
-            Console.WriteLine("Your total is $" + total + ". Thank you for your purchase.");
+            player.CalculateCostOfSugar();
             KeepShopping();
         }
+
+        
 
         public void buyIceCubes()
         {
@@ -100,35 +89,27 @@ namespace LemonadeStand
                 myIce.Add(new IceCubes());
             }
 
-            calculateTotalIce(ice);
-        }
-
-        public void calculateTotalIce(int ice)
-        {
-
-            double total = ice * 0.10;
-            Console.WriteLine("Your total is $" + total + ". Thank you for your purchase.");
+            player.CalculateCostOfIce();
             KeepShopping();
         }
 
+        
+
         public void buyCups()
         {
-            Console.WriteLine("How much ice would you like to purchase?");
+            Console.WriteLine("How much cups would you like to purchase?");
             int cups = int.Parse(Console.ReadLine());
 
             for (int i = 0; i <= cups; i++)
             {
                 player.inventory.playerCups.Add(new Cups());
             }
-            calculateTotalCups(cups);
+            player.CalculateCostOfCups();
+            KeepShopping();
+            Console.WriteLine();
         }
 
-        public void calculateTotalCups(int cups)
-        {
-            double total = cups * 0.25;
-            Console.WriteLine("Your total is $" + total + ". Thank you for your purchase.");
-            KeepShopping();
-        }
+        
 
         private void KeepShopping()
         {

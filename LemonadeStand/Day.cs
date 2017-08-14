@@ -49,22 +49,11 @@ namespace LemonadeStand
                 customers[i].CheckIfBuy();
             }
         }
-        public void RunSevenDays()
-        {
-
-        }
-
-        public void RunFourteenDays()
-        {
-
-        }
-
-        public void RunTwentyOneDays()
-        {
-
-        }
     }
 }
+        
+
+
 
         
  
