@@ -18,7 +18,7 @@ namespace LemonadeStand
         {
             int i;
             List<Customer> dailyCustomers = new List<Customer>();
-            for (i = 0; i <= 50; i++)
+            for (i = 0; i <= 200; i++)
             {
                 dailyCustomers.Add(new Customer());
                 dailyCustomers.ToString();
