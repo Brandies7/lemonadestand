@@ -14,8 +14,6 @@ namespace LemonadeStand
 
         }
 
-        
-
         public void getOpinions()
         {
             List<string> customerOpinions = new List<string>();
@@ -29,10 +27,11 @@ namespace LemonadeStand
         }
         public void CheckIfBuy()
         {
-            
+
         }
-        
     }
 }
+        
+
 
   

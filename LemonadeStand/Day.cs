@@ -10,7 +10,6 @@ namespace LemonadeStand
     {
         Weather weather;
         List<Customer> customers;
-        
         public Day()
         {
             weather = new Weather();
@@ -22,9 +21,9 @@ namespace LemonadeStand
             for (i = 0; i <= 100; i++)
             {
                 customers.Add(new Customer());
-                
             }
         }
+
         private void myWeather()
         {
             weather.runWeather();
@@ -38,7 +37,7 @@ namespace LemonadeStand
         }
         public void GenerateCustomerOpinions()
         {
-            for(int i = 0; i < customers.Count; i++)
+            for (int i = 0; i < customers.Count; i++)
             {
                 customers[i].getOpinions();
             }
@@ -64,7 +63,8 @@ namespace LemonadeStand
         {
 
         }
-
-        
     }
 }
+
+        
+ 

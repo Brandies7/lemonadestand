@@ -34,6 +34,7 @@ namespace LemonadeStand
         {
             Console.WriteLine("Goodmornig " + player.Name + ", would you like to go shopping today? 'Yes' or 'No'" + Environment.NewLine);
             string choice = Console.ReadLine().ToLower();
+            Console.WriteLine();
             switch (choice)
             {
                 case "yes":
@@ -77,8 +78,11 @@ namespace LemonadeStand
         public void runUserInterface()
         {
             player.getName();
+            Console.WriteLine();
             displayRules();
+            Console.WriteLine();
             goShopping();
+            Console.WriteLine();
         }
     }
 }

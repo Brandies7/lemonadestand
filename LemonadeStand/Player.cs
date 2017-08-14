@@ -30,7 +30,7 @@ namespace LemonadeStand
             Console.WriteLine("Hello New Player, Please Enter Your Name");
             name = Console.ReadLine();
         }
-            
+
         private void cashTotal()
         {
 
@@ -43,7 +43,7 @@ namespace LemonadeStand
         public void CalculateCostOfLemons()
         {
             double totalCostLemons = 0;
-            for(int i = 0; i < inventory.playerLemons.Count; i++)
+            for (int i = 0; i < inventory.playerLemons.Count; i++)
             {
                 totalCostLemons += inventory.playerLemons[i].price;
             }
@@ -75,10 +75,11 @@ namespace LemonadeStand
                 totalCostIce += inventory.playerIceCubes[i].price;
             }
         }
-
-
     }
 }
+
+
+   
 
     
 

@@ -9,8 +9,6 @@ namespace LemonadeStand
     class Store
     {
         Player player;
-
-
         public Store(Player player)
         {
             this.player = player;
@@ -118,12 +116,10 @@ namespace LemonadeStand
             Console.WriteLine("How much ice would you like to purchase?");
             int cups = int.Parse(Console.ReadLine());
 
-
             for (int i = 0; i <= cups; i++)
             {
                 player.inventory.playerCups.Add(new Cups());
             }
-
             calculateTotalCups(cups);
         }
 
@@ -133,8 +129,6 @@ namespace LemonadeStand
             Console.WriteLine("Your total is $" + total + ". Thank you for your purchase.");
             KeepShopping();
         }
-
-
 
         private void KeepShopping()
         {

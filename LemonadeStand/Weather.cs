@@ -10,10 +10,10 @@ namespace LemonadeStand
     {
 
         public int temp;
-        
+
         public Weather()
         {
-           
+
         }
 
         private string getWeather()
@@ -69,22 +69,16 @@ namespace LemonadeStand
                 int forecastTemp = random.Next(80, 100);
                 return forecastTemp;
             }
-            
-            
         }
-
-
-
-
 
         public void runWeather()
         {
-            
             Console.WriteLine("Todays forecast is " + getForecast() + " and " + getTemp() + " degrees.");
             Console.ReadLine();
             Console.WriteLine("Todays weather is " + getWeather() + " and " + getForecastTemp() + " degrees.");
             Console.ReadLine();
-            
         }
     }
 }
+            
+ 

@@ -9,7 +9,6 @@ namespace LemonadeStand
     public class Cups : Items
 
     {
-       
         public Cups()
         {
            this.price = 0.25;

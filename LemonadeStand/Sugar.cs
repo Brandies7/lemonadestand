@@ -8,7 +8,6 @@ namespace LemonadeStand
 {
     public class Sugar : Items
     {
-        
         public Sugar()
         {
            this.price = 0.50;
