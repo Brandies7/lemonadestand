@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Player
+    public class Player
     {
 
         private string name;
@@ -25,7 +25,7 @@ namespace LemonadeStand
             inventory = new Inventory();
         }
 
-        private void getName()
+        public void getName()
         {
             Console.WriteLine("Hello New Player, Please Enter Your Name");
             name = Console.ReadLine();
@@ -36,7 +36,7 @@ namespace LemonadeStand
 
         }
 
-        public void runName(string name)
+        public void runName()
         {
             getName();
         }
@@ -48,6 +48,35 @@ namespace LemonadeStand
                 totalCostLemons += inventory.playerLemons[i].price;
             }
         }
+
+        public void CalculateCostOfSugar()
+        {
+            double totalCostSugar = 0;
+            for (int i = 0; i < inventory.playerSugar.Count; i++)
+            {
+                totalCostSugar += inventory.playerSugar[i].price;
+            }
+        }
+
+        public void CalculateCostOfCups()
+        {
+            double totalCostCups = 0;
+            for (int i = 0; i < inventory.playerCups.Count; i++)
+            {
+                totalCostCups += inventory.playerCups[i].price;
+            }
+        }
+
+        public void CalculateCostOfIce()
+        {
+            double totalCostIce = 0;
+            for (int i = 0; i < inventory.playerIceCubes.Count; i++)
+            {
+                totalCostIce += inventory.playerIceCubes[i].price;
+            }
+        }
+
+
     }
 }
 

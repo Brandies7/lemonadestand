@@ -76,6 +76,7 @@ namespace LemonadeStand
 
         public void runUserInterface()
         {
+            player.getName();
             displayRules();
             goShopping();
         }

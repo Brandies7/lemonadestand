@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class IceCubes
+    public class IceCubes : Items
     {
-        double price;
+        
         public IceCubes()
         {
-            price = 0.10;
+           this.price = 0.10;
         }
     }
 }

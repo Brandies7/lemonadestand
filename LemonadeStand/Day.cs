@@ -19,10 +19,10 @@ namespace LemonadeStand
         private void getCustomers()
         {
             int i;
-            for (i = 0; i <= 200; i++)
+            for (i = 0; i <= 100; i++)
             {
                 customers.Add(new Customer());
-                //dailyCustomers.ToString();
+                
             }
         }
         private void myWeather()

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Sugar
+    public class Sugar : Items
     {
-        double price;
+        
         public Sugar()
         {
-            price = 0.50;
+           this.price = 0.50;
         }
     }
 }
