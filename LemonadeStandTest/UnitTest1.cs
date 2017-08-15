@@ -86,8 +86,68 @@ namespace LemonadeStandTest
 
             Assert.AreEqual(expectedResult, player.totalCostCups);
         }
+
+        [TestMethod]
+
+        public void TestMethod6()
+        {
+            Random random = new Random();
+            Weather weather = new Weather();
+            weather.getTemp();
+            int expectedResult = random.Next(50, 100);
+
+            Assert.AreEqual(expectedResult, weather.temp);
+        }
+
+        [TestMethod]
+
+        public void TestMethod7()
+        {
+            Lemons lemons = new Lemons();
+            double expectedResult = .25;
+
+            Assert.AreEqual(expectedResult, lemons.price);
+        }
+
+        [TestMethod]
+        public void TestMethod8()
+        {
+            Sugar sugar = new Sugar();
+            double expectedResult = .50;
+
+            Assert.AreEqual(expectedResult, sugar.price);
+        }
+
+        [TestMethod]
+        public void TestMethod9()
+        {
+            IceCubes ice = new IceCubes();
+            double expectedResult = .10;
+
+            Assert.AreEqual(expectedResult, ice.price);
+        }
+
+        [TestMethod]
+
+        public void TestMethod10()
+        {
+            Cups cups = new Cups();
+            double expectedResult = .10;
+
+            Assert.AreEqual(expectedResult, cups.price);
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+    
 
     
 
