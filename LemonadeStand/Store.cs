@@ -6,13 +6,28 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Store
+    public class Store
     {
         Player player;
+        Lemons lemons;
+        Sugar sugar;
+        IceCubes ice;
+        Cups cups;
+        
+        
+
+        
+
         public Store(Player player)
         {
-            this.player = player;
 
+            
+            this.player = player;
+            lemons = new Lemons();
+            sugar = new Sugar();
+            ice = new IceCubes();
+            cups = new Cups();
+            
         }
 
         public void getPurchase()
@@ -70,7 +85,7 @@ namespace LemonadeStand
             List<IceCubes> myIce = new List<IceCubes>();
             for (int i = 0; i <= ice; i++)
             {
-                myIce.Add(new IceCubes());
+                player.inventory.playerIceCubes.Add(new IceCubes());
             }
 
             player.CalculateCostOfIce();
@@ -92,8 +107,25 @@ namespace LemonadeStand
             player.CalculateCostOfCups();
             Console.WriteLine();
             Console.ReadLine();
+
         }
+
+        public void DisplayDaysPurchases()
+        {
+            Console.WriteLine("You purchased " + lemons + " lemons, for " + player.totalCostLemons + Environment.NewLine +
+                              sugar + " cups of sugar, for " + player.totalCostSugar + Environment.NewLine +
+                              ice + " cubes of ice, for " + player.totalCostIce + Environment.NewLine +
+                              "and " + cups + " cups, for " + player.totalCostIce + Environment.NewLine + 
+                              "for a grand total of " + (player.totalCostLemons + player.totalCostSugar + player.totalCostIce + player.totalCostCups) + "." + Environment.NewLine +
+                              "Thank you for shopping with us today. hope to see you again");
+            Console.ReadLine();
+
+        }
+
+        
     }
+
+    
 }
 
         

@@ -11,7 +11,10 @@ namespace LemonadeStand
 
         private string name;
         public Inventory inventory;
-        public double totalCostLemons; 
+        public double totalCostLemons;
+        public double totalCostSugar;
+        public double totalCostIce;
+        public double totalCostCups;
 
         public string Name
         {
@@ -79,11 +82,6 @@ namespace LemonadeStand
             }
             Console.WriteLine("Your total is $" + totalCostIce + ". Thank you for your purchase");
             Console.WriteLine();
-        }
-
-        public void DisplayDaysPurchases()
-        {
-
         }
     }
 }
