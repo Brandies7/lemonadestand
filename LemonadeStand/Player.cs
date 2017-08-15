@@ -44,41 +44,46 @@ namespace LemonadeStand
             {
                 totalCostLemons += inventory.playerLemons[i].price;
             }
-            Console.WriteLine("Your total is " + totalCostLemons + ". Thank you for your purchase");
-            Console.ReadLine();
+            Console.WriteLine("Your total is $" + totalCostLemons + ".");
+            Console.WriteLine();
         }
 
         public void CalculateCostOfSugar()
         {
             double totalCostSugar = 0;
-            for (int i = 0; i < inventory.playerSugar.Count; i++)
+            for (int i = 1; i < inventory.playerSugar.Count; i++)
             {
                 totalCostSugar += inventory.playerSugar[i].price;    
             }
-            Console.WriteLine("Your total is $" + totalCostSugar + ". Thank you for your purchase");
-            Console.ReadLine();
+            Console.WriteLine("Your total is $" + totalCostSugar + ".");
+            Console.WriteLine();
         }
 
         public void CalculateCostOfCups()
         {
             double totalCostCups = 0;
-            for (int i = 0; i < inventory.playerCups.Count; i++)
+            for (int i = 1; i < inventory.playerCups.Count; i++)
             {
                 totalCostCups += inventory.playerCups[i].price;               
             }
-            Console.WriteLine("Your total is $" + totalCostCups + ". Thank you for your purchase");
-            Console.ReadLine();
+            Console.WriteLine("Your total is $" + totalCostCups + ".");
+            Console.WriteLine();
         }
 
         public void CalculateCostOfIce()
         {
             double totalCostIce = 0;
-            for (int i = 0; i < inventory.playerIceCubes.Count; i++)
+            for (int i = 1; i < inventory.playerIceCubes.Count; i++)
             {
                 totalCostIce += inventory.playerIceCubes[i].price;               
             }
             Console.WriteLine("Your total is $" + totalCostIce + ". Thank you for your purchase");
-            Console.ReadLine();
+            Console.WriteLine();
+        }
+
+        public void DisplayDaysPurchases()
+        {
+
         }
     }
 }

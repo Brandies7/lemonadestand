@@ -43,6 +43,8 @@ namespace LemonadeStand
                     break;
                 case "no":
                     Console.WriteLine("Ok, well come back if you need anything.");
+                    Console.ReadLine();
+                    Console.Clear();
                     break;
                 default:
                     Console.WriteLine("I'm sorry, but that was invalid choice. Please select another.");
@@ -51,15 +53,11 @@ namespace LemonadeStand
             }
         }
 
-       
-        
-
         public void runUserInterface()
         {
             player.getName();
             Console.WriteLine();
             displayRules();
-            
             Console.WriteLine();
             goShopping();
             Console.WriteLine();

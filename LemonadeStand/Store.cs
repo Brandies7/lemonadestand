@@ -17,37 +17,19 @@ namespace LemonadeStand
 
         public void getPurchase()
         {
-            Console.WriteLine("Welcome to The General Store, your one stop-shop for all of your Lemonade Stand needs. How can we help you today?" + Environment.NewLine +
-                              "Please choose what items you would like to purchase." + Environment.NewLine +
-                              "Lemons: at 25 cents a piece" + Environment.NewLine +
-                              "Sugar: at 50 cents a cup" + Environment.NewLine +
-                              "IceCubes: at 10 cents a cube" + Environment.NewLine +
-                              "Cups: at 25 cents a cup");
-            string purchase = Console.ReadLine().ToLower();
-            switch (purchase)
-            {
-                case "lemons":
-                    buyLemons();
-                    break;
-                case "sugar":
-                    buySugar();
-                    break;
-                case "icecubes":
-                    buyIceCubes();
-                    break;
-                case "cups":
-                    buyCups();
-                    break;
-                default:
-                    Console.WriteLine("Sorry, we don't carry that item. Please select another.");
-                    getPurchase();
-                    break;
-            }
+            Console.WriteLine("Welcome to The General Store, your one stop-shop. How can we help you today?" + Environment.NewLine +
+                              "Please enter the amount of each item you would like to purchase." + Environment.NewLine +
+                              "If you don't need an item just enter '0' or 'None" + Environment.NewLine +
+                              "Thank you for choosing The General Store for your shopping needs" + Environment.NewLine +
+                              "Please feel free to stop back if you run out of supplies.");
+            Console.WriteLine();
+            buyLemons();
+
         }
 
         public void buyLemons()
         {
-            Console.WriteLine("How many lemons would you like to purchase?");
+            Console.Write("How many lemons would you like to purchase?: ");
             int lemons = int.Parse(Console.ReadLine());
 
 
@@ -58,12 +40,13 @@ namespace LemonadeStand
             }
 
             player.CalculateCostOfLemons();
-            KeepShopping();
+            Console.WriteLine();
+            buySugar();
         }
-            
+
         public void buySugar()
         {
-            Console.WriteLine("How much sugar would you like to purchase? (In Cups)");
+            Console.Write("How much sugar would you like to purchase? (In Cups): ");
             int sugar = int.Parse(Console.ReadLine());
 
 
@@ -73,14 +56,15 @@ namespace LemonadeStand
             }
 
             player.CalculateCostOfSugar();
-            KeepShopping();
+            Console.WriteLine();
+            buyIceCubes();
         }
 
-        
+
 
         public void buyIceCubes()
         {
-            Console.WriteLine("How much ice would you like to purchase?");
+            Console.Write("How much ice would you like to purchase? (In Cubes): ");
             int ice = int.Parse(Console.ReadLine());
 
             List<IceCubes> myIce = new List<IceCubes>();
@@ -90,14 +74,15 @@ namespace LemonadeStand
             }
 
             player.CalculateCostOfIce();
-            KeepShopping();
+            Console.WriteLine();
+            buyCups();
         }
 
-        
+
 
         public void buyCups()
         {
-            Console.WriteLine("How much cups would you like to purchase?");
+            Console.Write("How many cups would you like to purchase?: ");
             int cups = int.Parse(Console.ReadLine());
 
             for (int i = 0; i <= cups; i++)
@@ -105,32 +90,15 @@ namespace LemonadeStand
                 player.inventory.playerCups.Add(new Cups());
             }
             player.CalculateCostOfCups();
-            KeepShopping();
             Console.WriteLine();
-        }
-
-        
-
-        private void KeepShopping()
-        {
-            Console.WriteLine("Would you like to continue shopping? 'Yes' or 'No'");
-            string continueShopping = Console.ReadLine().ToLower();
-            switch (continueShopping)
-            {
-                case "yes":
-                    getPurchase();
-                    break;
-                case "no":
-                    Console.WriteLine("Ok, well you have a good day, and goodluck on your sales. Hope to see you soon.");
-                    break;
-                default:
-                    Console.WriteLine("Sorry but that was not a valid entry. Please try again.");
-                    break;
-            }
+            Console.ReadLine();
         }
     }
 }
 
+        
+
+ 
 
         
  

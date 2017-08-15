@@ -28,13 +28,7 @@ namespace LemonadeStand
         {
             weather.runWeather();
         }
-        public void RunDay()
-        {
-            getCustomers();
-            myWeather();
-            GenerateCustomerOpinions();
-            GenerateCustomerPurchases();
-        }
+        
         public void GenerateCustomerOpinions()
         {
             for (int i = 0; i < customers.Count; i++)
@@ -48,6 +42,14 @@ namespace LemonadeStand
             {
                 customers[i].CheckIfBuy();
             }
+        }
+
+        public void RunDay()
+        {
+            getCustomers();
+            myWeather();
+            GenerateCustomerOpinions();
+            GenerateCustomerPurchases();
         }
     }
 }

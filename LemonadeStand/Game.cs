@@ -10,8 +10,6 @@ namespace LemonadeStand
     public class Game
     {
         UserInterface ui;
-        Day days;
-
         public Game()
         {
             ui = new UserInterface();
@@ -19,13 +17,15 @@ namespace LemonadeStand
         public void runGame()
         {
             ui.runUserInterface();
-            
-            
         }
-
-        
     }
 }
+            
+            
+        
+
+        
+   
             
 
      
