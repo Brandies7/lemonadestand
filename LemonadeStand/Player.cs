@@ -53,7 +53,7 @@ namespace LemonadeStand
 
         public void CalculateCostOfSugar()
         {
-            double totalCostSugar = 0;
+            
             for (int i = 1; i < inventory.playerSugar.Count; i++)
             {
                 totalCostSugar += inventory.playerSugar[i].price;    
@@ -64,7 +64,7 @@ namespace LemonadeStand
 
         public void CalculateCostOfCups()
         {
-            double totalCostCups = 0;
+            
             for (int i = 1; i < inventory.playerCups.Count; i++)
             {
                 totalCostCups += inventory.playerCups[i].price;               
@@ -75,7 +75,7 @@ namespace LemonadeStand
 
         public void CalculateCostOfIce()
         {
-            double totalCostIce = 0;
+           
             for (int i = 1; i < inventory.playerIceCubes.Count; i++)
             {
                 totalCostIce += inventory.playerIceCubes[i].price;               

@@ -36,17 +36,58 @@ namespace LemonadeStandTest
 
             Assert.AreEqual(expectedResult, input);
         }
+
+
+
+        [TestMethod]
+
+        public void TestMethod3()
+        {
+            Player player = new Player();
+            Store store = new Store(player);
+            double expectedResult = 2.50;
+            string input = "5";
+            StringReader stringReader = new StringReader(input);
+            Console.SetIn(stringReader);
+
+            store.buySugar();
+
+            Assert.AreEqual(expectedResult, player.totalCostSugar);
+        }
+
+        [TestMethod]
+
+        public void TestMethod4()
+        {
+            Player player = new Player();
+            Store store = new Store(player);
+            double expectedResult = .50;
+            string input = "5";
+            StringReader stringReader = new StringReader(input);
+            Console.SetIn(stringReader);
+
+            store.buyIceCubes();
+
+            Assert.AreEqual(expectedResult, player.totalCostIce);
+        }
+
+        [TestMethod]
+
+        public void TestMethod5()
+        {
+            Player player = new Player();
+            Store store = new Store(player);
+            double expectedResult = .50;
+            string input = "5";
+            StringReader stringReader = new StringReader(input);
+            Console.SetIn(stringReader);
+
+            store.buyCups();
+
+            Assert.AreEqual(expectedResult, player.totalCostCups);
+        }
     }
 }
-
-        //[TestMethod]
-
-        //public void TestMethod3()
-        //{
-        //    Weather weather = new Weather();
-        //    int expectedResult = (50, 100);
-        //    int
-        //}
 
     
 

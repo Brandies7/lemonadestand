@@ -123,7 +123,7 @@ namespace LemonadeStand
                               ice + " cubes of ice, for " + player.totalCostIce + Environment.NewLine +
                               "and " + cups + " cups, for " + player.totalCostIce + Environment.NewLine + 
                               "for a grand total of " + (player.totalCostLemons + player.totalCostSugar + player.totalCostIce + player.totalCostCups) + "." + Environment.NewLine +
-                              "Thank you for shopping with us today. hope to see you again");
+                              "Thank you for shopping with us today. Hope to see you again");
             Console.ReadLine();
 
         }
