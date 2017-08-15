@@ -15,7 +15,7 @@ namespace LemonadeStand
             weather = new Weather();
             customers = new List<Customer>();
         }
-        private void getCustomers()
+        public void getCustomers()
         {
             int i;
             for (i = 0; i <= 100; i++)

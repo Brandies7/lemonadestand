@@ -32,11 +32,12 @@ namespace LemonadeStand
                               "popularity. Well, that pretty much covers it. Good luck " + player.Name + " and may your stand turn a nice profit." + Environment.NewLine);
         }
 
-        private void goShopping()
+        public void goShopping()
         {
             Console.WriteLine("Goodmornig " + player.Name + ", would you like to go shopping today? 'Yes' or 'No'" + Environment.NewLine);
             string choice = Console.ReadLine().ToLower();
             Console.WriteLine();
+            
             switch (choice)
             {
                 case "yes":
@@ -51,7 +52,10 @@ namespace LemonadeStand
                     Console.WriteLine("I'm sorry, but that was invalid choice. Please select another.");
                     goShopping();
                     break;
+                    
             }
+
+            
         }
 
         public void runUserInterface()

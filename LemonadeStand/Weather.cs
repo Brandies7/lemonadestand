@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Weather
+    public class Weather
     {
 
         public int temp;
@@ -16,7 +16,7 @@ namespace LemonadeStand
 
         }
 
-        private string getWeather()
+        public string getWeather()
         {
             List<string> daysWeather = new List<string>();
             daysWeather.Add("sunny");
@@ -29,14 +29,14 @@ namespace LemonadeStand
             return currentWeather;
         }
 
-        private int getTemp()
+        public int getTemp()
         {
             Random random = new Random();
             temp = random.Next(50, 100);
             return temp;
         }
 
-        private string getForecast()
+        public string getForecast()
         {
             List<string> daysForecast = new List<string>();
             daysForecast.Add("sunny");

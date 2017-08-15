@@ -42,7 +42,7 @@ namespace LemonadeStand
 
         public void CalculateCostOfLemons()
         {
-            double totalCostLemons = 0;
+            
             for (int i = 1; i < inventory.playerLemons.Count; i++)
             {
                 totalCostLemons += inventory.playerLemons[i].price;

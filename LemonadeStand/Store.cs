@@ -38,10 +38,16 @@ namespace LemonadeStand
                               "Thank you for choosing The General Store for your shopping needs" + Environment.NewLine +
                               "Please feel free to stop back if you run out of supplies.");
             Console.WriteLine();
-            buyLemons();
+            BuyIngredients();
 
         }
-
+        public void BuyIngredients()
+        {
+            buyLemons();
+            buySugar();
+            buyIceCubes();
+            buyCups();
+        }
         public void buyLemons()
         {
             Console.Write("How many lemons would you like to purchase?: ");
@@ -56,7 +62,7 @@ namespace LemonadeStand
 
             player.CalculateCostOfLemons();
             Console.WriteLine();
-            buySugar();
+            
         }
 
         public void buySugar()
@@ -72,7 +78,7 @@ namespace LemonadeStand
 
             player.CalculateCostOfSugar();
             Console.WriteLine();
-            buyIceCubes();
+            
         }
 
 
@@ -90,7 +96,7 @@ namespace LemonadeStand
 
             player.CalculateCostOfIce();
             Console.WriteLine();
-            buyCups();
+            
         }
 
 
