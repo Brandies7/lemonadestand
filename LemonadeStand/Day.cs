@@ -50,7 +50,7 @@ namespace LemonadeStand
         {
             
             weather.runForecast();
-           
+            
             weather.runWeather();
             getCustomers();
             GenerateCustomerOpinions();
