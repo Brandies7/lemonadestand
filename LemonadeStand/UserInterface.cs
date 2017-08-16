@@ -11,19 +11,19 @@ namespace LemonadeStand
         Player player;
         Store store;
         Customer customer;
-        
-        
-        
+
+
+
         public UserInterface()
         {
-            
+
             player = new Player();
             store = new Store(player);
             customer = new Customer();
 
         }
 
-        private void displayRules()
+        public void displayRules()
         {
 
             Console.WriteLine("Welocme " + player.Name + ". Congratulations on your new buisness venture. Lets go over the rules and where to begin" + Environment.NewLine +
@@ -38,7 +38,7 @@ namespace LemonadeStand
             Console.WriteLine("Goodmornig " + player.Name + ", would you like to go shopping today? 'Yes' or 'No'" + Environment.NewLine);
             string choice = Console.ReadLine().ToLower();
             Console.WriteLine();
-            
+
             switch (choice)
             {
                 case "yes":
@@ -53,11 +53,30 @@ namespace LemonadeStand
                     Console.WriteLine("I'm sorry, but that was invalid choice. Please select another.");
                     goShopping();
                     break;
-                    
+            }
+        }
+
+        public void SetPrice()
+        {
+            Console.WriteLine("Remember, " + player.Name + ", always be aware the weather. Be sure to set your prices accordingly." + Environment.NewLine +
+                              "What would you like to set your price per cup at for today?");
+
+            double price = double.Parse(Console.ReadLine());
+            if (price < 1.00 && price > .50)
+            {
+                Console.WriteLine("That price seems fair.");
+            }
+            else if (price > 1.00)
+            {
+                Console.WriteLine("Yikes! You're going scare the customers away with prices like those!");
+            }
+            else
+            {
+                Console.WriteLine("You're here to make money aren't you?");
             }
 
-            
         }
+
 
         public void runUserInterface()
         {
@@ -68,7 +87,9 @@ namespace LemonadeStand
             goShopping();
             Console.WriteLine();
             
-            
+            SetPrice();
         }
     }
 }
+
+

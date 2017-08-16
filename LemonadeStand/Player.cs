@@ -83,6 +83,8 @@ namespace LemonadeStand
             Console.WriteLine("Your total is $" + totalCostIce + ".");
             Console.WriteLine();
         }
+
+        
     }
 }
 

@@ -71,10 +71,15 @@ namespace LemonadeStand
             }
         }
 
-        public void runWeather()
+        public void runForecast()
         {
             Console.WriteLine("Todays forecast is " + getForecast() + " and " + getTemp() + " degrees.");
             Console.ReadLine();
+            
+        }
+
+        public void runWeather()
+        {
             Console.WriteLine("Todays weather is " + getWeather() + " and " + getForecastTemp() + " degrees.");
             Console.ReadLine();
         }

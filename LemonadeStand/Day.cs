@@ -8,10 +8,12 @@ namespace LemonadeStand
 {
     public class Day
     {
+        
         Weather weather;
         List<Customer> customers;
         public Day()
         {
+            
             weather = new Weather();
             customers = new List<Customer>();
         }
@@ -24,10 +26,7 @@ namespace LemonadeStand
             }
         }
 
-        private void myWeather()
-        {
-            weather.runWeather();
-        }
+        
         
         public void GenerateCustomerOpinions()
         {
@@ -44,10 +43,16 @@ namespace LemonadeStand
             }
         }
 
+        
+
+
         public void RunDay()
         {
+            
+            weather.runForecast();
+           
+            weather.runWeather();
             getCustomers();
-            myWeather();
             GenerateCustomerOpinions();
             GenerateCustomerPurchases();
         }
