@@ -13,55 +13,57 @@ namespace LemonadeStand
         Sugar sugar;
         IceCubes ice;
         Cups cups;
-        
-        
 
-        
+
+
+
+
 
         public Store(Player player)
         {
 
             
             this.player = player;
+            
             lemons = new Lemons();
             sugar = new Sugar();
             ice = new IceCubes();
             cups = new Cups();
-            
+
         }
 
         public void getPurchase()
         {
             Console.WriteLine("Welcome to The General Store, your one stop-shop. How can we help you today?" + Environment.NewLine +
                               "Please enter the amount of each item you would like to purchase." + Environment.NewLine +
-                              "If you don't need an item just enter '0' or 'None" + Environment.NewLine +
+                              "If you don't need an item just enter '0'" + Environment.NewLine +
                               "Thank you for choosing The General Store for your shopping needs" + Environment.NewLine +
                               "Please feel free to stop back if you run out of supplies.");
             Console.WriteLine();
             BuyIngredients();
 
         }
-        public void BuyIngredients()
-        {
-            buyLemons();
-            buySugar();
-            buyIceCubes();
-            buyCups();
-        }
+        
         public void buyLemons()
         {
             Console.Write("How many lemons would you like to purchase?: ");
             int lemons = int.Parse(Console.ReadLine());
+            
 
 
             for (int i = 0; i <= lemons; i++)
             {
 
                 player.inventory.playerLemons.Add(new Lemons());
+                
             }
+            
+            
 
             player.CalculateCostOfLemons();
+           
             Console.WriteLine();
+            
             
         }
 
@@ -104,6 +106,7 @@ namespace LemonadeStand
         public void buyCups()
         {
             Console.Write("How many cups would you like to purchase?: ");
+
             int cups = int.Parse(Console.ReadLine());
 
             for (int i = 0; i <= cups; i++)
@@ -116,14 +119,20 @@ namespace LemonadeStand
 
         }
 
-        public void DisplayDaysPurchases()
+        public void BuyIngredients()
         {
-            Console.WriteLine("You purchased " + lemons + " lemons, for " + player.totalCostLemons + Environment.NewLine +
-                              sugar + " cups of sugar, for " + player.totalCostSugar + Environment.NewLine +
-                              ice + " cubes of ice, for " + player.totalCostIce + Environment.NewLine +
-                              "and " + cups + " cups, for " + player.totalCostIce + Environment.NewLine + 
-                              "for a grand total of " + (player.totalCostLemons + player.totalCostSugar + player.totalCostIce + player.totalCostCups) + "." + Environment.NewLine +
-                              "Thank you for shopping with us today. Hope to see you again");
+            buyLemons();
+            buySugar();
+            buyIceCubes();
+            buyCups();
+            DisplayDaysTotal();
+        }
+
+        public void DisplayDaysTotal()
+        {
+            Console.WriteLine("Your total for today is $" + (player.totalCostLemons + player.totalCostSugar + player.totalCostIce + player.totalCostCups) + "." + Environment.NewLine +
+                              "Thank you for shopping with us today. Hope to see you again soon.");
+            
             Console.ReadLine();
 
         }

@@ -18,7 +18,7 @@ namespace LemonadeStand
         public void getCustomers()
         {
             int i;
-            for (i = 0; i <= 100; i++)
+            for (i = 1; i <= 100; i++)
             {
                 customers.Add(new Customer());
             }

@@ -13,6 +13,7 @@ namespace LemonadeStand
         Customer customer;
         
         
+        
         public UserInterface()
         {
             
@@ -66,7 +67,7 @@ namespace LemonadeStand
             Console.WriteLine();
             goShopping();
             Console.WriteLine();
-            store.DisplayDaysPurchases();
+            
             
         }
     }

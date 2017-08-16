@@ -80,7 +80,7 @@ namespace LemonadeStand
             {
                 totalCostIce += inventory.playerIceCubes[i].price;               
             }
-            Console.WriteLine("Your total is $" + totalCostIce + ". Thank you for your purchase");
+            Console.WriteLine("Your total is $" + totalCostIce + ".");
             Console.WriteLine();
         }
     }
