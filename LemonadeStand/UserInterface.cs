@@ -8,32 +8,28 @@ namespace LemonadeStand
 {
     public class UserInterface
     {
+        private Weather weather;
         Player player;
         Store store;
         Customer customer;
-
-
-
         public UserInterface()
         {
-
+            weather = new Weather();
             player = new Player();
             store = new Store(player);
             customer = new Customer();
 
         }
-
-        public void displayRules()
+        public void DisplayRules()
         {
 
-            Console.WriteLine("Welocme " + player.Name + ". Congratulations on your new buisness venture. Lets go over the rules and where to begin" + Environment.NewLine +
+            Console.WriteLine("Welocme " + player.Name + ". Congratulations on your new buisness venture. Lets go over the rules and where to begin." + Environment.NewLine +
                               "First, you'll need to go to the store and pick up your products. Then you're going to have to decide how to make your lemonade" + Environment.NewLine +
                               "(How much of each ingredient to add). Things you need to keep in mind: The weather will affect your sales. Price will also" + Environment.NewLine +
                               "affect your sales. The taste of your lemonade will affect customer satisfaction. Customer satisfaction will affect your stands" + Environment.NewLine +
                               "popularity. Well, that pretty much covers it. Good luck " + player.Name + " and may your stand turn a nice profit." + Environment.NewLine);
         }
-
-        public void goShopping()
+        public void GoShopping()
         {
             Console.WriteLine("Goodmornig " + player.Name + ", would you like to go shopping today? 'Yes' or 'No'" + Environment.NewLine);
             string choice = Console.ReadLine().ToLower();
@@ -42,7 +38,7 @@ namespace LemonadeStand
             switch (choice)
             {
                 case "yes":
-                    store.getPurchase();
+                    store.GetPurchase();
                     break;
                 case "no":
                     Console.WriteLine("Ok, well come back if you need anything.");
@@ -51,7 +47,7 @@ namespace LemonadeStand
                     break;
                 default:
                     Console.WriteLine("I'm sorry, but that was invalid choice. Please select another.");
-                    goShopping();
+                    GoShopping();
                     break;
             }
         }
@@ -68,7 +64,7 @@ namespace LemonadeStand
             }
             else if (price > 1.00)
             {
-                Console.WriteLine("Yikes! You're going scare the customers away with prices like those!");
+                Console.WriteLine("Yikes! You're going to scare the customers away with prices like those!");
             }
             else
             {
@@ -76,18 +72,19 @@ namespace LemonadeStand
             }
 
         }
-
-
-        public void runUserInterface()
+        public void RunUserInterface()
         {
-            player.getName();
+            player.GetName();
             Console.WriteLine();
-            displayRules();
+            DisplayRules();
             Console.WriteLine();
-            goShopping();
+            GoShopping();
             Console.WriteLine();
-            
+            weather.RunForecast();
+            Console.WriteLine();
             SetPrice();
+            Console.WriteLine();
+            weather.RunWeather();
         }
     }
 }

@@ -8,7 +8,6 @@ namespace LemonadeStand
 {
     public class Lemons : Items
     {
-
         public Lemons()
         {
             this.price = 0.25;

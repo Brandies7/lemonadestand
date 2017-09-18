@@ -8,13 +8,13 @@ namespace LemonadeStand
 {
     public class Customer
     {
-        public string todaysOpinion;
+        public string TodaysOpinion;
         public Customer()
         {
 
         }
 
-        public void getOpinions()
+        public void GetOpinions()
         {
             List<string> customerOpinions = new List<string>();
             customerOpinions.Add("I'm really thirsty, no matter what the weather today, I'm buying some lemonade.");
@@ -23,7 +23,7 @@ namespace LemonadeStand
             customerOpinions.Add("If it is hot out, I'm definitely stop and get some lemonade.");
             Random random = new Random();
             int opinion = random.Next(customerOpinions.Count);
-            todaysOpinion = customerOpinions[opinion];
+            TodaysOpinion = customerOpinions[opinion];
         }
         public void CheckIfBuy()
         {

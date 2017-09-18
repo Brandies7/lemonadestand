@@ -16,7 +16,7 @@ namespace LemonadeStand
 
         }
 
-        public string getWeather()
+        public string GetWeather()
         {
             List<string> daysWeather = new List<string>();
             daysWeather.Add("sunny");
@@ -29,14 +29,14 @@ namespace LemonadeStand
             return currentWeather;
         }
 
-        public int getTemp()
+        public int GetTemp()
         {
             Random random = new Random();
             temp = random.Next(50, 100);
             return temp;
         }
 
-        public string getForecast()
+        public string GetForecast()
         {
             List<string> daysForecast = new List<string>();
             daysForecast.Add("sunny");
@@ -49,7 +49,7 @@ namespace LemonadeStand
             return currentForecast;
         }
 
-        private int getForecastTemp()
+        private int GetForecastTemp()
         {
             if (temp > 50 && temp < 65)
             {
@@ -71,16 +71,16 @@ namespace LemonadeStand
             }
         }
 
-        public void runForecast()
+        public void RunForecast()
         {
-            Console.WriteLine("Todays forecast is " + getForecast() + " and " + getTemp() + " degrees.");
+            Console.WriteLine("Todays forecast is " + GetForecast() + " and " + GetTemp() + " degrees.");
             Console.ReadLine();
             
         }
 
-        public void runWeather()
+        public void RunWeather()
         {
-            Console.WriteLine("Todays weather is " + getWeather() + " and " + getForecastTemp() + " degrees.");
+            Console.WriteLine("Todays weather is " + GetWeather() + " and " + GetForecastTemp() + " degrees.");
             Console.ReadLine();
         }
     }

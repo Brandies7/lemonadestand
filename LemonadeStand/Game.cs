@@ -9,19 +9,16 @@ namespace LemonadeStand
 {
     public class Game
     {
-        
         UserInterface ui;
         Day day;
         public Game()
         {
-            
             ui = new UserInterface();
             day = new Day();
         }
-        public void runGame()
+        public void RunGame()
         {
-            ui.runUserInterface();
-            
+            ui.RunUserInterface();
             day.RunDay();
         }
     }

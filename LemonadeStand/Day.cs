@@ -13,11 +13,10 @@ namespace LemonadeStand
         List<Customer> customers;
         public Day()
         {
-            
             weather = new Weather();
             customers = new List<Customer>();
         }
-        public void getCustomers()
+        public void GetCustomers()
         {
             int i;
             for (i = 1; i <= 100; i++)
@@ -25,14 +24,11 @@ namespace LemonadeStand
                 customers.Add(new Customer());
             }
         }
-
-        
-        
         public void GenerateCustomerOpinions()
         {
             for (int i = 0; i < customers.Count; i++)
             {
-                customers[i].getOpinions();
+                customers[i].GetOpinions();
             }
         }
         public void GenerateCustomerPurchases()
@@ -42,17 +38,11 @@ namespace LemonadeStand
                 customers[i].CheckIfBuy();
             }
         }
-
-        
-
-
         public void RunDay()
         {
-            
-            weather.runForecast();
-            
-            weather.runWeather();
-            getCustomers();
+            weather.RunForecast();
+            weather.RunWeather();
+            GetCustomers();
             GenerateCustomerOpinions();
             GenerateCustomerPurchases();
         }

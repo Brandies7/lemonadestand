@@ -29,13 +29,13 @@ namespace LemonadeStand
             inventory = new Inventory();
         }
 
-        public void getName()
+        public void GetName()
         {
             Console.WriteLine("Hello New Player, Please Enter Your Name");
             name = Console.ReadLine();
         }
 
-        private void cashTotal()
+        private void CashTotal()
         {
 
         }
